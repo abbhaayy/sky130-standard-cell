@@ -1,0 +1,34 @@
+* Characterization Testbench: Post-Layout Parasitic Delay Analysis
+.include "../../sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+* Supply Conditioning
+VVDD VDD 0 DC 1.8V
+VVSS VSS 0 DC 0V
+VA A 0 PULSE(0 1.8V 0s 10ps 10ps 100ps 200ps)
+
+* Subcircuit: Extracted Inverter with Parasitic Elements (PEX)
+.subckt sky130_inv_extracted A Y VDD VSS
+XNMOS Y_int A VSS VSS sky130_fd_pr__nfet_01v8 w=0.42u l=0.15u
+XPMOS Y_int A VDD VDD sky130_fd_pr__pfet_01v8 w=0.84u l=0.15u
+* Extracted Parasitic Network
+C_pin_A A VSS 0.85fF
+C_out_Y Y VSS 1.12fF
+R_metal_Y Y_int Y 1.45
+.ends sky130_inv_extracted
+
+* Output Loading
+CL Y 0 10fF
+
+* Instance Instantiation
+XUT1 A Y VDD VSS sky130_inv_extracted
+
+* Control Logic
+.tran 0.1ps 500ps
+
+.control
+run
+meas tran t_fall_post TRIG v(Y) VAL=1.44V FALL=1 TARG v(Y) VAL=0.36V FALL=1
+meas tran t_rise_post TRIG v(Y) VAL=0.36V RISE=1 TARG v(Y) VAL=1.44V RISE=1
+.endc
+
+.end
