@@ -1,4 +1,4 @@
-This repository contains a silicon-ready, custom-designed CMOS Standard Cell Library (Inverter, 2-Input NAND) implemented in the **SkyWater 130nm PDK (`sky130A`)**. The library is built following automated place-and-route (APR) grid constraints, featuring full Design Rule Checking (DRC) compliance, Layout versus Schematic (LVS) equivalence, and Parasitic Extraction (PEX) for timing closed post-layout performance analysis.
+This repository contains custom-designed CMOS Standard Cell Library (Inverter, 2-Input NAND) implemented in the **SkyWater 130nm PDK (`sky130A`)**. The library is built following automated place-and-route (APR) grid constraints, featuring full Design Rule Checking (DRC) compliance, Layout versus Schematic (LVS) equivalence, and Parasitic Extraction (PEX) for timing closed post-layout performance analysis.
 
 *Technical Highlights & Key Achievements
 ->Zero-DRC / Clean LVS Sign-off: 100% verification pass using Magic and Netgen engines.
