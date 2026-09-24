@@ -1,0 +1,5 @@
+* SkyWater 130nm Standard Cell - Inverter Reference Schematic
+.subckt sky130_inv A Y VDD VSS
+XNMOS Y A VSS VSS sky130_fd_pr__nfet_01v8 w=0.42u l=0.15u
+XPMOS Y A VDD VDD sky130_fd_pr__pfet_01v8 w=0.84u l=0.15u
+.ends sky130_inv
