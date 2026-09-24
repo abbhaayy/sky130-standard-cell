@@ -49,15 +49,6 @@ Propagation Delay (tpd​),16.80ps,19.95ps,+18.75%
 
 
 
-*Directory Organization
-├── README.md                 # Architecture Overview & Verification Metrics
-├── SPECIFICATIONS.md         # Cell Layout Constraints & Physical Rules
-├── ENVIRONMENT.md            # EDA Setup, PDK Targets, and Tooling
-├── schematics/               # Spice Reference Netlists
-├── layout/                   # Magic Layout Files (.mag)
-├── verification/             # DRC and LVS Tcl Sign-Off Scripts
-└── simulation/               # Pre- and Post-Layout SPICE Testbenches
-
 
 
 
