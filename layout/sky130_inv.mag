@@ -1,0 +1,27 @@
+magic
+tech sky130A
+timestamp 1695500000
+<< nwell >>
+rect 0 136 272 272
+<< localized >>
+rect 0 0 272 272
+<< poly >>
+rect 110 30 130 240
+<< ndiff >>
+rect 40 30 200 100
+<< pdiff >>
+rect 40 160 200 230
+<< metal1 >>
+rect 0 0 272 30
+rect 0 242 272 272
+rect 40 50 70 80
+rect 170 50 200 80
+rect 40 180 70 210
+rect 170 180 200 210
+rect 170 80 200 180
+<< labels >>
+rlabel metal1 10 15 10 15 0 VSS
+rlabel metal1 10 255 10 255 0 VDD
+rlabel poly 120 135 120 135 0 A
+rlabel metal1 185 130 185 130 0 Y
+<< end >>
